@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Freelancer × AI — Study Explorer</title>
+<style>
+  :root {
+    --bg: #ffffff; --panel: #ffffff; --panel2: #f6f7f9; --line: #e3e5ea;
+    --txt: #1f2937; --muted: #6b7280; --accent: #2f6feb; --accent2: #6b7280;
+    --good: #16a34a; --bad: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+         background: var(--bg); color: var(--txt); }
+  header { padding: 16px 24px; border-bottom: 1px solid var(--line);
+           display: flex; align-items: center; gap: 16px; }
+  header h1 { font-size: 18px; margin: 0; }
+  header .meta { color: var(--muted); font-size: 13px; }
+  .tabs { display: flex; gap: 8px; padding: 12px 24px 0; }
+  .tab { padding: 9px 18px; border: 1px solid var(--line); border-bottom: none;
+         background: var(--panel); color: var(--muted); cursor: pointer;
+         border-radius: 8px 8px 0 0; font-size: 14px; }
+  .tab.active { background: var(--panel2); color: var(--txt); font-weight: 600; }
+  .view { padding: 20px 24px; }
+  .hidden { display: none; }
+  /* people layout */
+  .people-wrap { display: grid; grid-template-columns: 240px 1fr; gap: 18px; }
+  .roster { border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+            max-height: 80vh; overflow-y: auto; }
+  .roster button { display: block; width: 100%; text-align: left; padding: 11px 14px;
+                   background: var(--panel); color: var(--txt); border: none;
+                   border-bottom: 1px solid var(--line); cursor: pointer; font-size: 13px; }
+  .roster button:hover { background: var(--panel2); }
+  .roster button.active { background: var(--accent); color: #ffffff; font-weight: 600; }
+  .roster .pid { font-weight: 600; }
+  .roster .pjob { color: var(--muted); font-size: 12px; }
+  .roster button.active .pjob { color: #dbe7ff; }
+  .panel { border: 1px solid var(--line); border-radius: 10px; background: var(--panel);
+           padding: 18px; margin-bottom: 16px; }
+  .panel h2 { margin: 0 0 12px; font-size: 16px; }
+  .panel h3 { margin: 18px 0 8px; font-size: 13px; color: var(--accent2);
+              text-transform: uppercase; letter-spacing: .04em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { background: var(--panel2); border: 1px solid var(--line); border-radius: 999px;
+          padding: 5px 11px; font-size: 12px; }
+  .demo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+               gap: 8px 18px; }
+  .demo-grid .k { color: var(--muted); font-size: 12px; }
+  .demo-grid .v { font-size: 14px; }
+  /* AI summary cards */
+  .qcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 14px; }
+  .qcard { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .qcard .qt { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .qcard .qs { font-size: 14px; line-height: 1.5; }
+  .qcard .quotes { margin-top: 10px; }
+  .quote { border-left: 3px solid var(--accent2); padding: 4px 10px; margin: 6px 0;
+           color: var(--muted); font-style: italic; font-size: 13px; }
+  /* survey */
+  .score-row { display: grid; grid-template-columns: 1fr 38px 120px; align-items: center;
+               gap: 10px; padding: 4px 0; font-size: 13px; }
+  .bar { height: 9px; background: var(--line); border-radius: 6px; overflow: hidden; }
+  .bar > span { display: block; height: 100%; background: var(--accent); }
+  .sgroup { margin-bottom: 12px; }
+  .sgroup .gname { font-size: 12px; color: var(--accent2); font-weight: 600; margin: 8px 0 4px; }
+  /* transcript */
+  details.qa { border: 1px solid var(--line); border-radius: 8px; margin: 6px 0; background: var(--panel2); }
+  details.qa summary { padding: 10px 12px; cursor: pointer; font-size: 13px; list-style: none; }
+  details.qa summary::-webkit-details-marker { display: none; }
+  details.qa summary .sec { display: inline-block; font-size: 10px; text-transform: uppercase;
+        background: var(--line); color: var(--muted); padding: 2px 7px; border-radius: 999px; margin-right: 8px; }
+  details.qa .ans { padding: 0 14px 12px 14px; font-size: 14px; line-height: 1.55; color: #dfe3f5; }
+  details.qa .qfull { color: var(--muted); font-size: 12px; padding: 0 14px 8px; }
+  /* overview sub-tabs */
+  .subtabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .subtab { padding: 7px 14px; border: 1px solid var(--line); background: var(--panel);
+            color: var(--muted); cursor: pointer; border-radius: 8px; font-size: 13px; }
+  .subtab:hover { background: var(--panel2); }
+  .subtab.active { background: var(--accent); color: #ffffff; font-weight: 600; border-color: var(--accent); }
+  .chart-title { font-size: 15px; font-weight: 600; margin: 0 0 16px; }
+  /* horizontal bar chart */
+  .hbar-row { display: grid; grid-template-columns: 210px 1fr 46px; align-items: center;
+              gap: 12px; margin: 7px 0; font-size: 13px; }
+  .hbar-row .lab { color: var(--txt); text-align: right; line-height: 1.25; }
+  .hbar-track { background: var(--panel2); border-radius: 6px; height: 22px; overflow: hidden; }
+  .hbar-fill { height: 100%; background: var(--accent); border-radius: 6px; }
+  .hbar-row .val { color: var(--muted); }
+  /* pre/post bars */
+  .pp-row { margin: 14px 0; }
+  .pp-row .pp-lab { font-size: 13px; margin-bottom: 5px; font-weight: 600; }
+  .pp-bar { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; gap: 10px;
+            margin: 4px 0; font-size: 12px; color: var(--muted); }
+  .pp-track { background: var(--panel2); height: 16px; border-radius: 5px; overflow: hidden; }
+  .pp-fill.pre { background: #6ea8fe; height: 100%; }
+  .pp-fill.post { background: #f0a868; height: 100%; }
+  /* heatmap */
+  .hm { overflow-x: auto; padding-bottom: 6px; }
+  .hm-grid { display: grid; gap: 3px; align-items: center; }
+  .hm-cell { height: 30px; display: flex; align-items: center; justify-content: center;
+             font-size: 11px; border-radius: 4px; color: #1a1206; font-weight: 600; }
+  .hm-rowlab { font-size: 12px; color: var(--txt); text-align: right; padding-right: 8px; }
+  .hm-collab { font-size: 11px; color: var(--muted); text-align: center; }
+  .hm-collab-rot { height: 118px; position: relative; }
+  .hm-collab-rot span { position: absolute; bottom: 6px; left: 50%; transform: rotate(-45deg);
+        transform-origin: left bottom; white-space: nowrap; font-size: 11.5px; color: var(--txt); }
+  .iv-list .iv-person { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+        margin-bottom: 10px; background: var(--panel); }
+  .iv-list .iv-head { font-weight: 600; margin-bottom: 6px; }
+  .iv-list ul { margin: 4px 0 0; padding-left: 20px; }
+  .iv-list li { margin: 3px 0; font-size: 14px; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  /* wise interventions tab */
+  .wise-intro { border: 1px solid var(--line); border-radius: 10px; background: var(--panel2);
+        padding: 16px 18px; margin-bottom: 18px; line-height: 1.55; font-size: 14px; }
+  .wise-intro b { color: var(--accent2); }
+  .need-card { border: 1px solid var(--line); border-radius: 12px; background: var(--panel);
+        padding: 18px; margin-bottom: 18px; border-top: 4px solid var(--accent); }
+  .need-card.understand { border-top-color: #6ea8fe; }
+  .need-card.self_integrity { border-top-color: #f0a868; }
+  .need-card.belong { border-top-color: #4caf7d; }
+  .need-card h2 { margin: 0 0 4px; font-size: 18px; }
+  .need-card .def { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+  .need-card .shows { font-size: 14px; line-height: 1.55; margin-bottom: 14px; }
+  .wcols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 900px) { .wcols { grid-template-columns: 1fr; } }
+  .wcol h3 { margin: 0 0 8px; font-size: 12px; color: var(--accent2);
+        text-transform: uppercase; letter-spacing: .04em; }
+  .ev { border-left: 3px solid var(--line); padding: 4px 0 4px 12px; margin: 0 0 12px; }
+  .ev .pt { font-size: 13.5px; line-height: 1.5; }
+  .ev .eq { color: var(--muted); font-style: italic; font-size: 12.5px; margin-top: 4px; }
+  .ev .pid { display: inline-block; font-size: 10px; font-weight: 700; color: #ffffff;
+        background: var(--accent); border-radius: 999px; padding: 1px 7px; margin-right: 6px; }
+  .prod { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px;
+        padding: 12px 14px; margin-bottom: 10px; }
+  .prod .pname { font-weight: 700; font-size: 14px; color: var(--accent); }
+  .prod .pwhat { font-size: 13.5px; line-height: 1.5; margin: 4px 0; }
+  .prod .pmech { font-size: 12px; color: var(--muted); }
+  .prod .pmech b { color: var(--accent2); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Freelancer × AI — Study Explorer</h1>
+  <span class="meta" id="meta"></span>
+</header>
+
+<div class="tabs">
+  <div class="tab active" data-tab="people" onclick="showTab('people')">People</div>
+  <div class="tab" data-tab="overview" onclick="showTab('overview')">Overview &amp; interventions</div>
+  <div class="tab" data-tab="wise" onclick="showTab('wise')">Wise interventions</div>
+</div>
+
+<div id="people" class="view">
+  <div class="people-wrap">
+    <div class="roster" id="roster"></div>
+    <div id="person"></div>
+  </div>
+</div>
+
+<div id="overview" class="view hidden">
+  <div class="subtabs" id="subtabs"></div>
+  <div class="panel"><div id="chart-area"></div></div>
+</div>
+
+<div id="wise" class="view hidden">
+  <div id="wise-area"></div>
+</div>
+
+<script src="app_data.js"></script>
+<script>
+const Q_LABELS = {
+  feel: "How they feel about AI",
+  use: "How they use AI",
+  job_impact: "How their job is affected by AI",
+  tools_wanted: "AI tools they want / find useful",
+};
+
+const SURVEY_LABELS = {
+  age: "Age",
+  ai_usage_freq: "AI usage frequency",
+  freelance_years: "Years freelancing",
+  confidence: "Confidence",
+  understanding_ai: "Understands AI",
+  ai_views_pre: "AI views (before)",
+  ai_views_post: "AI views (after)",
+  ai_views_change: "AI views change",
+  identity_centrality: "Identity centrality",
+  career_optimism: "Career optimism",
+  ownership_post: "Ownership of work",
+  ai_meaningful: "AI frees meaningful work",
+  future_threat: "Worry about future",
+  others_devalue: "Others devalue my work",
+  intent_keep_using: "Intent to keep using AI",
+};
+
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
+  document.getElementById("people").classList.toggle("hidden", name !== "people");
+  document.getElementById("overview").classList.toggle("hidden", name !== "overview");
+  document.getElementById("wise").classList.toggle("hidden", name !== "wise");
+}
+
+function esc(s) { return (s == null ? "" : String(s)).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+function scoreBar(v) {
+  if (v == null) return `<span class="v">—</span><div class="bar"></div>`;
+  const pct = Math.max(0, Math.min(100, ((v - 1) / 6) * 100));
+  return `<span class="v">${v}</span><div class="bar"><span style="width:${pct}%"></span></div>`;
+}
+
+function renderQCard(key, obj) {
+  if (!obj) return "";
+  const quotes = (obj.quotes || []).map(q => `<div class="quote">“${esc(q)}”</div>`).join("");
+  return `<div class="qcard">
+    <div class="qt">${Q_LABELS[key]}</div>
+    <div class="qs">${esc(obj.summary)}</div>
+    <div class="quotes">${quotes}</div>
+  </div>`;
+}
+
+function renderPerson(p) {
+  const demo = p.demographics.map(d => `<div><div class="k">${esc(d.label)}</div><div class="v">${esc(d.value)}</div></div>`).join("");
+  const themes = p.themes.map(t => `<span class="chip">${esc(t.theme)} · ${t.count}</span>`).join("") || `<span class="note">No keyword themes detected.</span>`;
+
+  let ai = `<p class="note">No AI summary available (run build_app_data.py with an API key).</p>`;
+  if (p.ai_summary) {
+    const cards = ["feel","use","job_impact","tools_wanted"].map(k => renderQCard(k, p.ai_summary[k])).join("");
+    ai = `<div class="qcards">${cards}</div>`;
+  }
+
+  const survey = p.survey.map(g => {
+    const rows = g.items.map(it => `<div class="score-row"><div>${esc(it.label)}</div>${scoreBar(it.value)}</div>`).join("");
+    return `<div class="sgroup"><div class="gname">${esc(g.group)}</div>${rows}</div>`;
+  }).join("");
+
+  const transcript = p.transcript.map((qa, i) => `
+    <details class="qa">
+      <summary><span class="sec">${esc(qa.section)}</span>${esc(qa.answer.slice(0, 110))}${qa.answer.length > 110 ? "…" : ""}</summary>
+      <div class="qfull"><b>Interviewer:</b> ${esc(qa.question)}</div>
+      <div class="ans"><b>Answer:</b> ${esc(qa.answer)}</div>
+    </details>`).join("");
+
+  return `
+    <div class="panel">
+      <h2>Participant ${p.id} — ${esc(p.job)} <span class="note">(${esc(p.field)})</span></h2>
+      <div class="demo-grid">${demo}</div>
+      <h3>Themes mentioned</h3>
+      <div class="chips">${themes}</div>
+    </div>
+    <div class="panel">
+      <h2>AI summary of this interview</h2>
+      ${ai}
+      <p class="note">Generated by ${esc(APP_DATA.model)} from the transcript; quotes are the participant's own words.</p>
+    </div>
+    <div class="panel">
+      <h2>Survey responses (1 = strongly disagree, 7 = strongly agree)</h2>
+      ${survey}
+    </div>
+    <div class="panel">
+      <h2>Full transcript (${p.transcript.length} answers — click to expand)</h2>
+      ${transcript}
+    </div>`;
+}
+
+function selectPerson(idx) {
+  document.querySelectorAll("#roster button").forEach((b, i) => b.classList.toggle("active", i === idx));
+  document.getElementById("person").innerHTML = renderPerson(APP_DATA.people[idx]);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function hbar(title, data, opts) {
+  opts = opts || {};
+  const max = Math.max(1, ...data.values);
+  const rows = data.labels.map((l, i) => {
+    const v = data.values[i];
+    return `<div class="hbar-row"><div class="lab">${esc(l)}</div>
+      <div class="hbar-track"><div class="hbar-fill" style="width:${(v / max) * 100}%"></div></div>
+      <div class="val">${v}</div></div>`;
+  }).join("");
+  const sub = opts.sub ? `<p class="note">${esc(opts.sub)}</p>` : "";
+  return `<div class="chart-title">${esc(title)}</div>${rows}${sub}`;
+}
+
+function prepost(title, data) {
+  const rows = data.labels.map((l, i) => {
+    const pre = data.pre[i], post = data.post[i];
+    return `<div class="pp-row"><div class="pp-lab">${esc(l)}</div>
+      <div class="pp-bar"><span>pre</span><div class="pp-track"><div class="pp-fill pre" style="width:${(pre / 7) * 100}%"></div></div><span>${pre}</span></div>
+      <div class="pp-bar"><span>post</span><div class="pp-track"><div class="pp-fill post" style="width:${(post / 7) * 100}%"></div></div><span>${post}</span></div>
+    </div>`;
+  }).join("");
+  return `<div class="chart-title">${esc(title)}</div>${rows}<p class="note">Mean agreement (1 = strongly disagree, 7 = strongly agree), before vs after the interview.</p>`;
+}
+
+function heatmap(title, data) {
+  const flat = data.matrix.flat();
+  const max = Math.max(1, ...flat);
+  const cols = data.participants.length;
+  let html = `<div class="chart-title">${esc(title)}</div><div class="hm"><div class="hm-grid" style="grid-template-columns:210px repeat(${cols}, minmax(34px,1fr))">`;
+  html += `<div></div>` + data.participants.map(p => `<div class="hm-collab">P${p}</div>`).join("");
+  data.themes.forEach((t, r) => {
+    html += `<div class="hm-rowlab">${esc(t)}</div>`;
+    data.matrix[r].forEach(v => {
+      const a = v / max;
+      const bg = v === 0 ? "var(--panel2)" : `rgba(240,140,70,${(0.18 + 0.82 * a).toFixed(3)})`;
+      html += `<div class="hm-cell" style="background:${bg};color:${v === 0 ? 'var(--muted)' : '#1a1206'}">${v || ""}</div>`;
+    });
+  });
+  html += `</div></div><p class="note"># of transcript chunks per participant coded with each theme.</p>`;
+  return html;
+}
+
+function corrHeatmap(title, data) {
+  const cols = data.cols.length;
+  let html = `<div class="chart-title">${esc(title)}</div><div class="hm"><div class="hm-grid" style="grid-template-columns:230px repeat(${cols}, minmax(60px,1fr))">`;
+  html += `<div></div>` + data.cols.map(c => `<div class="hm-collab-rot"><span>${esc(SURVEY_LABELS[c] || c)}</span></div>`).join("");
+  data.rows.forEach((t, r) => {
+    html += `<div class="hm-rowlab">${esc(t)}</div>`;
+    data.rho[r].forEach((v, ci) => {
+      if (v === null || v === undefined) {
+        html += `<div class="hm-cell" style="background:var(--panel2)"></div>`;
+        return;
+      }
+      const p = data.p[r][ci];
+      const mag = Math.abs(v);
+      const bg = v >= 0
+        ? `rgba(217,80,80,${(0.12 + 0.85 * mag).toFixed(3)})`
+        : `rgba(90,140,250,${(0.12 + 0.85 * mag).toFixed(3)})`;
+      const star = p < 0.05 ? "*" : (p < 0.10 ? "+" : "");
+      html += `<div class="hm-cell" style="background:${bg};color:#1f2937">${v}${star}</div>`;
+    });
+  });
+  html += `</div></div><p class="note">Spearman rho — <b style="color:#d95050">red = positive</b>, <b style="color:#5a8cfa">blue = negative</b>. * p&lt;0.05, + p&lt;0.10. Exploratory at n=${APP_DATA.n_participants}; theme values are each participant's share of chunks.</p>`;
+  return html;
+}
+
+function interventionsView() {
+  const ivs = APP_DATA.interventions.map(p => {
+    const items = (p.interventions || []).map(x => `<li>${esc(x)}</li>`).join("") || `<li class="note">none suggested</li>`;
+    return `<div class="iv-person"><div class="iv-head">Participant ${p.id} — ${esc(p.job)}</div><ul>${items}</ul></div>`;
+  }).join("");
+  return `<div class="chart-title">Possible interventions, per participant</div>
+    <div class="iv-list">${ivs}</div>
+    <p class="note">Generated by ${esc(APP_DATA.model)} from each transcript.</p>`;
+}
+
+let CHART_DEFS = [];
+function renderChart(idx) {
+  document.querySelectorAll("#subtabs .subtab").forEach((b, i) => b.classList.toggle("active", i === idx));
+  document.getElementById("chart-area").innerHTML = CHART_DEFS[idx].render();
+}
+
+function renderOverview() {
+  const c = APP_DATA.charts;
+  CHART_DEFS = [
+    { name: "Main platform", render: () => hbar("Main platform (participants)", c.main_platform) },
+    { name: "Years freelancing", render: () => hbar("Years freelancing (participants)", c.freelance_years) },
+    { name: "Age", render: () => hbar("Age (years, binned)", c.age) },
+    { name: "AI usage", render: () => hbar("AI usage frequency (participants)", c.ai_usage) },
+    { name: "Gender", render: () => hbar("Gender (participants)", c.gender) },
+    { name: "Themes mentioned", render: () => hbar("Themes mentioned (participants per theme)", c.themes_participants, { sub: `of ${APP_DATA.n_participants} participants` }) },
+    { name: "AI views before/after", render: () => prepost("AI views before vs after interview", c.ai_views) },
+    { name: "Participant × theme heatmap", render: () => heatmap("Participant × theme heatmap", c.heatmap) },
+    { name: "Theme × survey (Spearman)", render: () => corrHeatmap("Spearman: theme share × survey measures", c.correlation) },
+    { name: "Interventions", render: interventionsView },
+  ];
+  document.getElementById("subtabs").innerHTML =
+    CHART_DEFS.map((d, i) => `<div class="subtab" onclick="renderChart(${i})">${esc(d.name)}</div>`).join("");
+  renderChart(0);
+}
+
+function renderWise() {
+  const area = document.getElementById("wise-area");
+  const w = APP_DATA.wise;
+  if (!w || !w.needs) {
+    area.innerHTML = `<div class="panel"><p class="note">No wise-intervention synthesis available. Run build_app_data.py with an API key (delete the "_wise" entry in llm_cache.json to refresh).</p></div>`;
+    return;
+  }
+  const intro = `<div class="wise-intro">
+    <b>Framework:</b> Brockner &amp; Sherman (2020), “Wise interventions in organizations.” Wise
+    interventions are small, theory-based shifts in how people construe themselves, others, and their
+    situation. They target three fundamental needs — <b>understand</b>, <b>self-integrity</b>, and
+    <b>belong</b>. Below, the freelancers' own words are mapped onto each need, with concrete things
+    we could build to address it.
+    <div style="margin-top:8px">${esc(w.overview || "")}</div>
+  </div>`;
+
+  const cards = (w.needs || []).map(n => {
+    const ev = (n.evidence || []).map(e => `
+      <div class="ev"><div class="pt">${esc(e.point)}</div>
+      ${e.quote ? `<div class="eq"><span class="pid">P${esc(e.pid)}</span>“${esc(e.quote)}”</div>` : ""}</div>`).join("");
+    const prods = (n.products || []).map(p => `
+      <div class="prod"><div class="pname">${esc(p.name)}</div>
+        <div class="pwhat">${esc(p.what)}</div>
+        <div class="pmech">${p.how_it_helps ? esc(p.how_it_helps) + " " : ""}<b>Wise mechanism:</b> ${esc(p.mechanism)}</div>
+      </div>`).join("");
+    return `<div class="need-card ${esc(n.key)}">
+      <h2>${esc(n.name)}</h2>
+      <div class="def">${esc(n.definition)}</div>
+      <div class="shows">${esc(n.how_it_shows_up)}</div>
+      <div class="wcols">
+        <div class="wcol"><h3>What the data shows (evidence)</h3>${ev || '<p class="note">—</p>'}</div>
+        <div class="wcol"><h3>What we can produce</h3>${prods || '<p class="note">—</p>'}</div>
+      </div>
+    </div>`;
+  }).join("");
+
+  area.innerHTML = intro + cards +
+    `<p class="note">Synthesis generated by ${esc(w._model || APP_DATA.model)} from the per-person summaries and transcript answers; quotes are participants' own words. Exploratory at n=${APP_DATA.n_participants}.</p>`;
+}
+
+function init() {
+  document.getElementById("meta").textContent =
+    `${APP_DATA.n_participants} participants · model: ${APP_DATA.model}`;
+  const roster = document.getElementById("roster");
+  roster.innerHTML = APP_DATA.people.map((p, i) =>
+    `<button onclick="selectPerson(${i})"><span class="pid">Participant ${p.id}</span><br><span class="pjob">${esc(p.job)}</span></button>`).join("");
+  selectPerson(0);
+  renderOverview();
+  renderWise();
+}
+init();
+</script>
+</body>
+</html>

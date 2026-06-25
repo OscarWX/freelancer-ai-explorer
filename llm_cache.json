@@ -1,0 +1,665 @@
+{
+ "5": {
+  "feel": {
+   "summary": "They feel frustrated, sad, and cynical that AI is causing clients to devalue professional writing, and they worry about the long-term viability of writing work. They also feel conflicted about using AI: it is convenient for deadlines, but feels like a \"necessary evil\" and raises environmental guilt.",
+   "quotes": [
+    "It made me sad and cynical about how much longer I can work as a writer both in my day and freelance jobs.",
+    "It feels like a shortcut for good or bad. It saves time but I feel a bit guilty because AI is bad for the environment.",
+    "I worry about our long term relationship if that's how they feel about AI"
+   ]
+  },
+  "use": {
+   "summary": "They use AI only for editing, proofreading, and grammar checks, not for drafting or strategic decisions. For industry context, sensitive topics, and client-specific judgment, they rely on clients or trusted human writers instead.",
+   "quotes": [
+    "I only use AI for editing or proofreading at the end, so the writing still feels mine",
+    "I trust AI for things like grammar, but not industry or relationship context",
+    "Decision making and drafting are important to do yourself. That's where the real creativity comes in and the quality"
+   ]
+  },
+  "job_impact": {
+   "summary": "Their freelance income has declined because they are getting fewer jobs, especially simpler copywriting work like websites, social posts, and blogs. They believe some clients are replacing or pressuring freelancers with AI, including lowballing rates by comparing their work to free ChatGPT output.",
+   "quotes": [
+    "My income has gone down a bit, by maybe 20 percent? My jobs pay the same but I am getting fewer of them",
+    "I assume people are using AI in house instead of paying for a freelance copy writer",
+    "I have been low balled in the price negotiation stage a few times recently and I suspect it's because they want to spend less money since ai could do it for free"
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want better ways to prove and communicate the value and ROI of their writing, especially through analytics-based reporting. They specifically described a reporting tool that would pull performance data, create simple visuals, and turn it into client-ready slides and PDFs.",
+   "quotes": [
+    "A better reporting tool. Right now I just track things piecemeal and present with a Google side deck",
+    "Something that can pull analytics for me and create simple graphics, then turn that into slides and PDFs for clients",
+    "Ways to educate clients on our value and communicate why ai shouldn't replace us"
+   ]
+  },
+  "interventions": [
+   "Build a client ROI reporting dashboard for copywriters that connects to analytics sources, pulls metrics like lead generation conversions, click throughs, and page views, and exports simple client-ready slide decks and PDFs.",
+   "Create a negotiation and client-education toolkit with scripts, one-page explainers, and comparison examples showing the difference between generic AI copy and high-quality strategic writing.",
+   "Provide an after-hours expert feedback network for niche writing questions, especially regulated or sensitive topics like healthcare, so they can get timely human input without relying only on friends or risking seeming incompetent to clients."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "6": {
+  "feel": {
+   "summary": "They feel conflicted about AI: useful for logistics and research, but creatively alienating when it replaces struggle, exploration, and artistic involvement. They are more comfortable using it as support than as the core creative engine.",
+   "quotes": [
+    "I felt disconnected from the work from a creative side",
+    "simply typing a prompt and choosing between results didn't have the same sense of involvement",
+    "I am certainly more comfortable using it for planning and research , than in a creative and artistic capacity."
+   ]
+  },
+  "use": {
+   "summary": "They use AI for video generation, idea generation, planning presentations, technical answers, basic programming, meeting notes, and research tasks like workstation parts lists. They still prefer people for firsthand working knowledge and creative/technical judgment.",
+   "quotes": [
+    "we used a video generation tool to enhance some footage through work.",
+    "It had been helpful for me in planning how I am going to present work to new clients",
+    "If it is a technical question I have used LLMs to get technical answers , and to help me with basic programing."
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has contributed to reduced work and client expectations for faster, cheaper results, though they also see some clients valuing human work more. Their wages have declined recently, and AI has made some clients underestimate the complexity of creative work.",
+   "quotes": [
+    "Ive noticed a drop off in the amount of work .",
+    "People dont want to pay for the time it takes for a human artist to get versions - they just want something quick and cheap",
+    "I have been  able to keep busy - but my wages have actually declined recently ."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want AI tools that are purpose-built, safer, and separated by function rather than one overwhelming central chat. They specifically want contact follow-up outside a main chat window and video generation that adds elements into existing footage rather than replacing it.",
+   "quotes": [
+    "perhaps if the AI tools were more split apart , and purpose built.",
+    "having a specific function to follow up with contacts , outside of a main chat window , would let me feel like it was safer to use it",
+    "being able to generate elements that can integrate into existing footage , rather than replacing the footage completely , would be helpful"
+   ]
+  },
+  "interventions": [
+   "Build a secure, purpose-built freelancer CRM for follow-ups with contacts, kept separate from a general LLM chat and designed around privacy and data boundaries.",
+   "Create a video AI compositing tool that generates controllable elements or layers to integrate into existing footage, instead of replacing the whole shot.",
+   "Organize vetted local meetups or a trusted peer network for video/VFX artists that offers professional support, emotional support, and second or third opinions from people with firsthand experience."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "7": {
+  "feel": {
+   "summary": "They feel AI is useful as assistance, but they still see the core concept and human judgment as their own contribution. They also feel sad, less confident, and worried when AI can do specialty effects quickly or when its outputs feel cold and context-insensitive.",
+   "quotes": [
+    "The work felt like mine with the help of AI",
+    "When ai dose it it can sometimes feel cold and definitely not like a human did it sometimes",
+    "It did bring my confidence down a bit because you do start to feel like your starting to not be needed anymore."
+   ]
+  },
+  "use": {
+   "summary": "They use AI for ideas, flow, shortcuts, workflow speed, and help finding resources like plugins, while still doing concept and judgment-heavy editing themselves. They combine AI with YouTube and online resources when solving production problems.",
+   "quotes": [
+    "the concept was mine then I asked ai how I could make it all flow together",
+    "A little of all of it. I searched YouTube and asked ai for some help and ideas as well.",
+    "Ai always help me with shorkeys that I forget, and ideas to make things come together better."
+   ]
+  },
+  "job_impact": {
+   "summary": "Their freelancing income and new-client pipeline have worsened substantially, which they attribute to both the economy and widespread AI/DIY availability. They feel clients now expect lower prices, bundles, or free work, and that it is becoming harder to stand out and be trusted.",
+   "quotes": [
+    "Oh it's gone down as almost 90% it started around this time last year due to a lot of different factors mainly being economics but as of today my whole clientele is prior clients I haven't had a new customer in about 6 months",
+    "Well there have been a heavy push in diy and use AI so that has made it so everyone thinks they can do it all or don't want to pay for services anymore.",
+    "They expect everything free or at a very low price and they also want to bundle things the should be separate into one liw price."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want tools that make editing faster and simpler, especially reliable b-roll generation for client-shot footage. They also want better prompting support for consistent AI footage and a community/forum for practical freelancer needs like extra or cheaper footage.",
+   "quotes": [
+    "Just more access to tools that will make my workflow faster and simpler like consistent footage creation",
+    "being able to have the ability to make good looking b roll footage would be game changing.",
+    "Maybe a fourm with category of our most needed subject like extra footage cheaper footage ect"
+   ]
+  },
+  "interventions": [
+   "Create a 'human touch' client-proof kit for them: before/after clips, screen-recorded process snippets, layer breakdowns, and short case-study captions showing what they personally decided, so clients can see the work was not simply generated by AI.",
+   "Build or provide an AI b-roll workflow assistant for video editors that turns client-shot footage into shot lists and prompt templates, with features for consistent faces, matching style, and generating usable filler footage quickly.",
+   "Set up a freelancer support forum or rapid-feedback network with categories like cultural sensitivity checks, extra footage, cheaper footage sources, effects help, and plugin recommendations, so they can get quick human input while actively working."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "9": {
+  "feel": {
+   "summary": "They feel AI is useful and still see the final work as their own because they review, verify, and make final decisions themselves. At the same time, they think it may become harder to stand out or be trusted as AI makes work easier for others.",
+   "quotes": [
+    "it felt entirely mine",
+    "gives me more control",
+    "probably  harder"
+   ]
+  },
+  "use": {
+   "summary": "They use AI mainly to speed up research, analysis, and summarization, then manually review the output for accuracy before delivery. They also explain their process to clients when asked.",
+   "quotes": [
+    "i used AI to speed up research  then reviewed  everything myself to make sure  it was accurate",
+    "summarization",
+    "i review and verify all my result before delivery"
+   ]
+  },
+  "job_impact": {
+   "summary": "Their freelancing income has increased because AI helps them work faster, especially on research, which lets them take on more projects. Clients now expect faster delivery and ask more about accuracy and methods.",
+   "quotes": [
+    "increased",
+    "AI help me work faster",
+    "more project"
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They find AI summarization useful for faster research and want AI training to gain clarity as tools become more common. They also said support for freelancers should focus on community.",
+   "quotes": [
+    "faster research and time saving",
+    "AI training",
+    "community"
+   ]
+  },
+  "interventions": [
+   "A client-facing AI transparency and verification template that lets them document how AI was used, what they checked manually, and how accuracy was confirmed before delivery.",
+   "Practical AI training focused on research, analysis, summarization, and final quality review for data and reporting projects.",
+   "A freelancer community or peer-feedback group where they can get specific constructive feedback on reporting clarity and share ways to find more clients on freelance platforms."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "10": {
+  "feel": {
+   "summary": "She feels pressured to adapt to AI, but remains confident that her human judgment, imagination, life experience, and client understanding make her work better. AI-generated writing often feels alien to her unless she substantially rewrites it.",
+   "quotes": [
+    "When I use AI, it always feels like it's someone else's work, not my own, unless I rewrite the whole thing.",
+    "I feel about the same in terms of my confidence and value. I know I can write better than ChatGPT.",
+    "I have an imagination. I have various life experiences I can pull from. I can also understand my client and the audience I am writing for."
+   ]
+  },
+  "use": {
+   "summary": "She uses AI reluctantly for writing drafts or when clients provide AI drafts, then rewrites or humanizes the work. She also sees clients use AI first, but they still come to her when they are unsure or need explanations tailored to English learners.",
+   "quotes": [
+    "This was for a blog article. I had ChatGPT write a draft, but I was not happy with it at all.",
+    "I prefer to handle all writing tasks without AI, but sometimes I can't.",
+    "Yes, sometimes they will run their sentences through an AI tool before they consult me. But they aren't always sure about the AI's responses."
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has negatively affected her income by reducing demand for short editing jobs, especially from foreign clients who now use free AI tools. She says money is the area of freelancing that has changed the most, though immigration and trade changes have also reduced her client base.",
+   "quotes": [
+    "I am earning less. A lot of my clients just aren't there anymore.",
+    "These are mainly foreign clients who need editing for shorter texts, like work emails. They used to send them to me. Now they just run them through AI because it's free.",
+    "Oh, it's definitely the money."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "She most wants help finding steady clients who need editing regularly, plus training from people using AI at a more advanced level. She would also benefit from a larger editor support network across time zones.",
+   "quotes": [
+    "What would help most is knowing where to find more clients, preferably ones who need editing work done on a regular basis.",
+    "It should focus on matching freelancers with clients who need our help/skills.",
+    "It would help to hear from people who are using it at a more advanced level than I am."
+   ]
+  },
+  "interventions": [
+   "A client-matching service specifically for non-native English speakers, international students, and foreign businesses who need recurring human editing, with filters for short texts, work emails, admissions materials, and ongoing English-language support.",
+   "A practical training program led by advanced AI users that shows editors how to use AI without losing their own voice, how to rewrite AI drafts into warmer human prose, and how to explain AI outputs in simpler language for English learners.",
+   "An expanded peer-editor support network with members in multiple time zones, including Asia, so she can get quick human advice during late-night jobs instead of waiting until the next day."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "11": {
+  "feel": {
+   "summary": "They feel mostly positive about AI: it makes the process easier, boosts confidence, and provides strong creative ideas while they still feel ownership of the final work. They are cautious about AI in high-risk areas like money and worry it may become harder to stand out as more people use AI.",
+   "quotes": [
+    "Yes, its given me more confidence and creative ideas to expand how I do things",
+    "The process felt so much easier working with AI.",
+    "AI can make mistakes - and I am responsible for that. AI making a mistake with money can cost me huge."
+   ]
+  },
+  "use": {
+   "summary": "They use AI mainly for creative ideation in marketing campaigns, giving prompts and turning AI-generated concepts into final advertisements. They do not use AI for money-related work or for input/feedback, preferring human judgment there.",
+   "quotes": [
+    "I reached out to AI with a prompt and it came back with how I can turn that into a creative advertisment.",
+    "I give AI prompts and it turns it into a complex idea",
+    "I do not use it for input or feedback."
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has had a positive income impact because it helps them produce higher-quality marketing plots, but their biggest earning constraint is lack of time rather than AI. They also feel future competition/trust may get harder as more freelancers incorporate AI.",
+   "quotes": [
+    "I definitely do earn more, I think its both me and AI behind that because I am able to put out higher quality marketing plots due to the AI's creativity",
+    "The biggest obstacle is myself due to lack of time. AI does not play a role in that.",
+    "If I had more time in my day, I could have more clients but I just dont."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They find AI useful for understanding an idea and converting it into a creative marketing concept. They also want reliable human support: trusted, honest, relatable, experienced people who can help with final touches, drawing-board work, and last-minute judgment.",
+   "quotes": [
+    "Using the AI's tools for understanding a certain idea and turning it into a marketing idea",
+    "Tasks I need help with are the final touches to my projects, as well as some help on the drawing board.",
+    "I look for trustworthy people, honest, relatable, experienced."
+   ]
+  },
+  "interventions": [
+   "Build an AI campaign-ideation workspace where they can enter a client brief and get multiple creative marketing plots, visual concepts, and ad directions, while keeping all final output and financial decisions under their control.",
+   "Create a vetted human feedback network for freelancers with reviewers labeled by experience, honesty, reliability, and creative specialty, so they can get relatable final-draft judgment beyond their parents when needed.",
+   "Offer a trusted assistant/subcontractor matching tool for overflow work, especially people who can help with final touches, drawing-board development, and weekend or last-minute project coverage."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "12": {
+  "feel": {
+   "summary": "They are open to AI for specific add-ons, but AI-generated elements make the final work feel only partly theirs. They still strongly value doing the core creative and strategic design work themselves, and inaccurate AI text can reduce confidence because it adds checking work.",
+   "quotes": [
+    "The end result felt like partially my work, but not fully.",
+    "No matter what the output is, if I didn't design or draw that, it's not my art.",
+    "Sometimes less confident because it creates more work, almost like a babysitter for the text."
+   ]
+  },
+  "use": {
+   "summary": "They use AI for out-of-the-ordinary design elements such as caricatures/images, for speeding up some design prompts, for drafting or revising titles and paragraphs, and for coding edits like find/replace in apps or website dashboards. They still rely heavily on humans for testing, feedback, and project-specific input.",
+   "quotes": [
+    "For this third concept, I used ChatGPT to generate a caricature of the person in the ad, and then applied my original ad ideas with the generated image.",
+    "For global APP or website dashboard edits, AI comes in handy. It can FIND/REPLACE in coding easily that saves me time.",
+    "Another person. Beta testing an APP in web mode. I leaned on client focus group of humans to test."
+   ]
+  },
+  "job_impact": {
+   "summary": "So far, AI has not changed how clients evaluate their work or how much they earn, though they expect to keep raising rates slightly. The bigger pressure they describe is financial: cost of living, tighter client budgets, and lower ad spends.",
+   "quotes": [
+    "I have not noticed any changes.",
+    "So far the same.",
+    "It's the client tightening their budgets and leaning towards a more organic approach."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want AI to be more factually accurate and better at sticking closely to prompts. They also want more timely human support, including 24/7 access for specific kinds of feedback, and a way for clients to rate the human quality of a project.",
+   "quotes": [
+    "If AI results from prompts were accurate on facts.",
+    "Maybe human beings accessible 24/7 on specific tasks.",
+    "A Human Being Meter for ratings."
+   ]
+  },
+  "interventions": [
+   "A fact-preserving AI writing assistant for press releases and campaign copy that highlights any removed or changed facts, requires source-backed claims, and shows a before/after change log before the freelancer uses the text.",
+   "A stricter image/design prompt tool with negative constraints and step-by-step approval, so it does not add unwanted elements like extra people, props, or settings when generating caricatures or humorous ad concepts.",
+   "A 24/7 vetted human feedback pool organized by task type, with built-in incentives for testers, so they can quickly get human app testing, client-style review, or emotional self-tape feedback outside normal U.S. working hours."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "13": {
+  "feel": {
+   "summary": "They have mixed feelings: AI can feel integrated and produce work they are proud of, but it also creates anxiety about replacement and client distrust. In their main work, they avoid AI because it complicates trust and approval.",
+   "quotes": [
+    "I felt good about the outcome and so did the client, which is all that's required at the end of the day.",
+    "Well in my main work, I tend to not use AI because it kind of muddies the waters and clients don't approve of it.",
+    "Kinda just a feeling of dread and inevitability."
+   ]
+  },
+  "use": {
+   "summary": "They use AI mainly for out-of-scope or lower-stakes tasks that need speed, such as modifying a flyer or generating social media captions. They do not rely on it much for their main work, and often need to correct outputs that are off, too rigid, or not human-sounding.",
+   "quotes": [
+    "The AI tool was able to accurately copy the art style and render the new pictures in the same style.",
+    "With other work than annotating it can be pretty helpful, but usually in menial tasks that only need to be sped up",
+    "Changing that flyer would be one. Generating social media captions would be another."
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has increased client scrutiny, rules, and detection on projects, sometimes making work more time-intensive and damaging client relationships. They feel earnings have gone down somewhat overall, competition for remote work is challenging, and AI makes it harder to stand out or feel secure long-term.",
+   "quotes": [
+    "I've had multiple occurrences of projects being halted because of people tainting the waters with AI usage",
+    "Yeah the last client I had implemented a bunch of detection stuff on their platform that ended up making the work a little more time intensive",
+    "I think the money has gone down a bit, but increased in other avenues."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They value human feedback from experienced people, especially for design, and want more networking and research support for breaking into work connected to their sociological/research background. They would also benefit from clients or systems that provide a consistent stream of work.",
+   "quotes": [
+    "Usually individuals who have experience in the same field, in this case graphic design",
+    "Yeah, probably just networking, but some research into breaking in would be in order too",
+    "Really just clients that were willing to organize a consistent stream of work"
+   ]
+  },
+  "interventions": [
+   "A client-compliance and work-provenance tool that logs drafts, prompts, edits, and human-created steps, plus tracks each client's AI rules and detection requirements before submission.",
+   "A vetted peer-feedback network for freelance design and annotation work, matching them with experienced people in the same field for quick critiques on rubrics, flyers, wordmarks, and other visual tasks.",
+   "A freelance stability and pivot support platform with scam-filtered remote leads, recurring-client tracking, resume updates, and networking pathways into sociology/research-related roles."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "14": {
+  "feel": {
+   "summary": "They feel AI-assisted work is still their own because they treat AI as a collaborator and then add personal style, emotion, and story. They are positive about AI’s usefulness but protective of the human individuality in their jewelry and descriptions.",
+   "quotes": [
+    "It feels like my own work because I always use AI as a collaborator, not as the final product.",
+    "It is about 75% my input and 25% AI input.",
+    "I don't think AI can ever replicate the individuality of a human producer"
+   ]
+  },
+  "use": {
+   "summary": "They use AI mainly for Etsy/product marketing: product descriptions, keywords, trends, audience mindsets, pricing strategy, and polishing their online appearance. They use ChatGPT specifically to find trending keywords, then edit outputs into their own style.",
+   "quotes": [
+    "I asked AI for the best keywords to market my product to reach the appropriate audience.",
+    "I used ChatGPT to learn the trending keywords",
+    "I use the AI description as a starting point and edit according to my style"
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has had a mostly positive financial impact, helping increase their customer base, views, engagement, and overall earnings. However, competition remains difficult because many similar products exist and AI may make it easier for designs to be copied or mass-produced.",
+   "quotes": [
+    "I have been able to increase my customer base and overall earnings with the use of AI.",
+    "i've definitely gotten more views and product engagements",
+    "There are so many similar products on the marketplace that its hard to stand out."
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want more personalized AI support that understands their shop, style, audience, and existing work. They also want tools for audience segmentation, image generation, marketing guidance, and collaboration.",
+   "quotes": [
+    "The information can be categorized by generation, styles, and other groups of people",
+    "tools such as an image generator would be immensely helpful",
+    "It should be also to survey my existing work and provide advice specific to my shop"
+   ]
+  },
+  "interventions": [
+   "Build an Etsy shop audit tool that scans their existing listings, product descriptions, photos, reviews, and keywords, then gives shop-specific recommendations in their personal style rather than generic repeated keywords.",
+   "Create a jewelry marketing dashboard that shows trending Etsy search terms segmented by generation, culture, style, and customer group, with duplicate/generic keywords filtered out and suggested wording for product descriptions.",
+   "Provide a nonjudgmental AI-plus-human marketing coach or collaboration tool focused on jewelry branding, pricing strategy, packaging/freebie ideas, and creative design suggestions using different materials and artistic uses of metal."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "16": {
+  "feel": {
+   "summary": "They see AI as an efficiency assistant rather than a replacement, with the final work feeling partly theirs because they retain responsibility for judgment, validation, and final decisions. They feel confident in their expertise, though sometimes frustrated when clients undervalue the human work behind AI-assisted outputs.",
+   "quotes": [
+    "When I use this tools I finalise the work to look partly my own.",
+    "Compared to manual projects, the outcome felt equally rigorous, but the process was far more efficient—not as a loss of control, but as an assistant that cleared away the 'busy work' so I could be more creative",
+    "Not really, I just use AI as an assistant but I still use my skills and I make a lot of decisions on my own"
+   ]
+  },
+  "use": {
+   "summary": "They use AI tools such as Claude, GitHub Copilot, and Gemini for debugging, refactoring, automation, initial code structures, boilerplate scripts, data processing support, and some digitization tasks. They personally handle integration, verification, architectural decisions, data validation, and context-specific corrections.",
+   "quotes": [
+    "In my work as a data Scientist, I frequently use AI tools like claude, GitHub Copilot, Gemini for debugging, refactoring and automating software development.",
+    "I use th AI to provide initial code structures for complex debugging problem and i am responsible for integration and verification and final refinement",
+    "While AI can assist with initial data entry and document scanning, it often struggles with the subtle nuances of historical text, specific archival formatting and I have to step in to do the same"
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has made client expectations more focused on speed, which can pressure timelines and pay, but they maintain value by emphasizing complex, context-heavy work and human-in-the-loop verification. Reputation has changed the most because they now actively educate clients about why their expert oversight matters.",
+   "quotes": [
+    "My earnings have fluctuated due to the rise of AI tools, as some clients now expect faster turnaround times for less pay.",
+    "The hardest part is overcoming the assumption that AI-assisted work is automatically 'generic' or 'low-effort'.",
+    "Out of the four areas, reputation has changed the most for me. I no longer rely solely on my track record; I now actively manage client perceptions by educating them on why my 'human-in-the-loop' approach is essential for quality, rather than letting them assume AI can handle everything instantly"
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want standardized AI auditing and verification frameworks, especially for bias, technical accuracy, intellectual property, and human-in-the-loop quality control. They also want workflow-integrated tools that help document and showcase the expert value they add beyond raw AI output.",
+   "quotes": [
+    "To feel clearer about my role, I believe it would help to see more industry-wide clarity on standards for AI collaboration, specifically regarding intellectual property and best practices for human-in-the-loop verification in data science.",
+    "Standardized frameworks for testing AI outputs for bias and technical accuracy, providing a uniform way to 'audit' the work before it is integrated into a final project.",
+    "freelancers need tools that help them verify, document, and showcase the specific, expert-level value they add beyond what AI can do alone."
+   ]
+  },
+  "interventions": [
+   "A workflow-integrated AI output audit tool for data science projects that plugs into notebooks or GitHub, checks AI-generated code for technical accuracy, bias, assumptions, dataset constraints, and validation gaps, and produces an audit trail before integration.",
+   "A client-facing human-in-the-loop report generator that documents the difference between raw AI output and the freelancer’s final verified work, including identified AI errors, context-specific corrections, validation steps, and why the timeline is necessary.",
+   "Proposal and contract templates for AI-assisted freelancing that clearly define human verification, architectural oversight, intellectual property expectations, quality-control stages, and realistic turnaround times."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "17": {
+  "feel": {
+   "summary": "They feel generally comfortable with AI when it is used transparently as a productivity tool, not as a substitute for their own skills. A client challenge made them reflect on boundaries, but they still feel ownership when they gather the data and use AI only for support.",
+   "quotes": [
+    "it defs did make me question my own ai use but not super detrimental in a 'im gonna be too dependant on ai' way but more so made me wanna utuilise it as a tool rather than something that finishes my jobs for me if that makes sense",
+    "it defs felt great knowing i used my own brain and problem solving skills and just used the ai as a tool",
+    "i felt like it was fully mine especially considering i wasnt fully reliant on using ai to complete my own job for me"
+   ]
+  },
+  "use": {
+   "summary": "They use AI mainly for productivity tasks like analytics, spreadsheets, graphs, measurements, and finishing touches. They do not see AI as useful for in-person, experiential, or relationship-based parts of the work such as events, music-industry communication, and gathering data face to face.",
+   "quotes": [
+    "i told them i ran some analytics thru ai to help me figure out some stuff and make a spreadsheet easier and faster than i would have been able to",
+    "helping me create either spreadsheets or gather certain info and make a graph with the right details i need, using it as like an extension of microsoft office you know",
+    "gahering data is the most important part of my work that i would prefer to handle sincee ai cant do that"
+   ]
+  },
+  "job_impact": {
+   "summary": "Their income is about the same or slightly higher than before, and they attribute some of the improvement to AI-driven efficiency rather than changes in pricing. They see money and opportunities as the area most affected, though the change feels mixed because more people are entering digital freelance work.",
+   "quotes": [
+    "about the same, a little higher than in the past pre 2022",
+    "ai defs played a role in that purely because of the effenciancy ive used it for finishing jobs and give stuff the finishing touches if needed",
+    "money forsure, more opportunities"
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They want AI to function as an ethical digital office assistant for tedious tasks, especially graphs, data measurements, spreadsheets, and similar admin work. They also want simple support tools like bullet-point task lists, note taking, and clearer disclosure practices for AI use.",
+   "quotes": [
+    "i think having it as a digital office assitant makes it work better for me personally and thats what id want",
+    "creating certain graphs or measurments of data, aka the tediuous stuff that would otherwise take up useful time that slows things down in the process of the end goal. menial tasks you know?",
+    "bullet point checklist is the main one and most effecient in my experience"
+   ]
+  },
+  "interventions": [
+   "A client-ready AI disclosure and project breakdown generator that helps them state exactly where AI was used, where it was not used, and what work they personally completed.",
+   "A lightweight progress-receipt tool that timestamps notes, screenshots, photos, videos, drafts, and data sources so they can document their own work if a client questions AI involvement.",
+   "A digital office assistant focused on spreadsheets, graphs, measurements, and bullet-point task checklists, while keeping human-gathered event notes and client insights clearly separated from AI-generated outputs."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "24": {
+  "feel": {
+   "summary": "They feel very positive about AI, describing it as helpful, satisfying, creativity-enhancing, and even “perfect.” At the same time, they believe freelancers need discipline and should use AI for ideas rather than careless copy-pasting.",
+   "quotes": [
+    "I felt soo satisfied and hardworking at the same time",
+    "AI is perfect",
+    "AI should not be used carelessly"
+   ]
+  },
+  "use": {
+   "summary": "They use ChatGPT for practical academic and freelance support, especially APA referencing, research, and generating broader ideas for projects. They describe AI as clarifying rules, educating them, and helping them think more creatively.",
+   "quotes": [
+    "I turned to AI(Chatgpt) for help",
+    "It clarified the APA rules and provided examples that i followed closely",
+    "It was my end of degree project I did my research mostly using AI"
+   ]
+  },
+  "job_impact": {
+   "summary": "AI has had a very positive effect on their work and income by saving time, helping them complete projects faster, and allowing them to handle several projects. They also feel clients have recently been happy with their work, partly because AI provides broader ideas.",
+   "quotes": [
+    "It makes it easier for me to earn",
+    "A project that was to take one hour it took 30 minutes",
+    "It improves my earnings because of spending lesser time"
+   ]
+  },
+  "tools_wanted": {
+   "summary": "They find AI tools useful for references, research, broader ideas, and creativity, and when asked what support should be prioritized for freelancers, they said tools. They did not name a missing tool, but their needs point toward tools that save time, support quality work, and encourage disciplined AI use.",
+   "quotes": [
+    "Tools",
+    "AI gave us broad ideas",
+    "It has increased my creativity"
+   ]
+  },
+  "interventions": [
+   "An APA referencing assistant that explains rules, gives examples, and formats citations step by step, matching the way they used ChatGPT for APA help.",
+   "An AI idea-development workspace that generates broad project ideas but includes prompts to rewrite, personalize, and avoid copy-pasting, supporting their view that AI should be used creatively and not carelessly.",
+   "A freelance project time-saver dashboard that uses AI to break down tasks, estimate time saved, and help them manage several projects at once."
+  ],
+  "_model": "gpt-5.5"
+ },
+ "_wise": {
+  "overview": "Across the freelancer evidence, generative AI is not experienced as one simple threat or benefit. It creates confusion about what clients expect, how AI use should be disclosed, what counts as expert work, and how to prove value. It also threatens self-integrity when clients compare skilled work to free or instant AI output, or when AI makes creative work feel less personally authored. At the same time, many freelancers describe human networks, mentors, peers, clients, and communities as essential sources of judgment, reassurance, and practical help that AI cannot replace.",
+  "needs": [
+   {
+    "key": "understand",
+    "name": "Need to understand",
+    "definition": "People need a clear, stable, workable interpretation of what is happening, what is expected, and how to act. In this data, AI threatens understanding by making client expectations, acceptable AI use, quality standards, pricing, timing, and verification less clear.",
+    "how_it_shows_up": "Freelancers are trying to define what AI is for, what it should not do, how much disclosure is needed, how to verify AI-assisted work, and how to explain the difference between raw AI output and professional judgment. Several also want concrete tools for reporting ROI, auditing outputs, setting expectations, and making AI use transparent.",
+    "evidence": [
+     {
+      "point": "Some freelancers want industry-wide standards for AI collaboration, verification, and intellectual property so their role is clearer.",
+      "pid": 16,
+      "quote": "To feel clearer about my role, I believe it would help to see more industry-wide clarity on standards for AI collaboration, specifically regarding intellectual property and best practices for human-in-the-loop verification in data science."
+     },
+     {
+      "point": "Clients increasingly ask how work was done and whether it is accurate, forcing freelancers to explain their process.",
+      "pid": 9,
+      "quote": "yes i spend more time explaining my process and how i verify the result"
+     },
+     {
+      "point": "Freelancers are developing their own disclosure norms, but the boundaries still depend on the client and contract.",
+      "pid": 17,
+      "quote": "a bit of 50/50 depending on client themselfs, but for me personally ill always mention if any sort of ai is used or not so i can keep a solid transparent foundation between me and whoever im working for"
+     },
+     {
+      "point": "Some want clearer ways to demonstrate business value, not just argue that human work is better than AI.",
+      "pid": 5,
+      "quote": "I think continuing to show high quality and good ROI related to my writing, like lead generation conversions and click throughs, page views, etc"
+     },
+     {
+      "point": "AI outputs can create uncertainty because they may ignore prompts or introduce factual errors, requiring repeated checking.",
+      "pid": 12,
+      "quote": "If I run a batch of titles or paragraphs through AI for a press release and it returns with a version that has removed facts or tweaked them with errors despite proper prompts, I have to check and then re-prompt."
+     }
+    ],
+    "products": [
+     {
+      "name": "AI Use & Verification Playbook Builder",
+      "what": "A client-facing generator for AI-use disclosures, project-specific AI boundaries, verification steps, and human-in-the-loop explanations that freelancers can attach to proposals, contracts, or final deliverables.",
+      "how_it_helps": "It gives freelancers a clear way to say when AI was used, what it did, what the freelancer personally checked, and which decisions remained human.",
+      "mechanism": "Changes the construal from \"AI use is vague or suspicious\" to \"AI use is bounded, transparent, and professionally governed.\""
+     },
+     {
+      "name": "Client Value and ROI Reporting Studio",
+      "what": "A reporting tool that pulls performance data, creates simple visuals, and turns them into client-ready slides and PDFs, especially for marketing, writing, design, and campaign work.",
+      "how_it_helps": "It helps freelancers move conversations away from whether AI could create similar-looking output and toward measurable outcomes such as conversions, clicks, engagement, page views, or campaign results.",
+      "mechanism": "Changes the construal from \"my value is subjective and easy to dismiss\" to \"my value is visible, trackable, and tied to client outcomes.\""
+     },
+     {
+      "name": "AI Output Audit Workspace",
+      "what": "A workflow-integrated audit checklist for accuracy, bias, prompt adherence, technical correctness, intellectual property risk, and human review before AI-assisted work is delivered.",
+      "how_it_helps": "It reduces the burden of ad hoc checking and gives freelancers a repeatable quality-assurance process they can use and explain to clients.",
+      "mechanism": "Changes the construal from \"I am reacting to unpredictable AI errors\" to \"I have a proactive quality-control system.\""
+     },
+     {
+      "name": "Scope, Speed, and Price Expectation Setter",
+      "what": "A proposal module that breaks a project into stages such as AI draft, expert review, contextual correction, revisions, and final delivery, with suggested timelines and client explanations.",
+      "how_it_helps": "It helps freelancers explain why AI may speed up some parts of a job without eliminating the need for expert time, judgment, or verification.",
+      "mechanism": "Changes the construal from \"AI means instant and cheap\" to \"AI can accelerate pieces of the work, but quality still requires expert steps.\""
+     }
+    ]
+   },
+   {
+    "key": "self_integrity",
+    "name": "Need for self-integrity",
+    "definition": "People need to see themselves as competent, good, and valuable. In this data, AI threatens self-integrity when freelancers feel devalued, replaceable, less creative, less trusted, or pressured to justify why their work is worth paying for.",
+    "how_it_shows_up": "Freelancers describe sadness, cynicism, lowered confidence, creative disconnection, and frustration when clients treat skilled work as equivalent to free AI output. Others protect self-integrity by emphasizing judgment, life experience, human touch, verification, creativity, and client understanding.",
+    "evidence": [
+     {
+      "point": "AI-related client devaluation makes some writers question the long-term viability of their profession.",
+      "pid": 5,
+      "quote": "It made me sad and cynical about how much longer I can work as a writer both in my day and freelance jobs."
+     },
+     {
+      "point": "Seeing AI perform specialty effects quickly can reduce confidence and make freelancers feel less needed.",
+      "pid": 7,
+      "quote": "It did bring my confidence down a bit because you do start to feel like your starting to not be needed anymore."
+     },
+     {
+      "point": "AI-generated creative work can feel alienating when it replaces the struggle and involvement that make the work feel personally meaningful.",
+      "pid": 6,
+      "quote": "I felt disconnected from the work from a creative side - like the results weren't my own and they were just a mash up of other people's work pushed together to look good"
+     },
+     {
+      "point": "Some freelancers maintain self-integrity by naming the human capacities that make their work better than AI output.",
+      "pid": 10,
+      "quote": "I have an imagination. I have various life experiences I can pull from. I can also understand my client and the audience I am writing for."
+     },
+     {
+      "point": "Client assumptions that AI makes work instant can feel like a devaluation of expert effort, even when the freelancer can correct the perception.",
+      "pid": 16,
+      "quote": "During that conversation, I initially felt a bit frustrated, as it felt like the client was devaluing the effort required for high-quality work in favor of AI-driven speed."
+     }
+    ],
+    "products": [
+     {
+      "name": "Human Contribution Portfolio",
+      "what": "A portfolio builder that captures before-and-after work, decisions made, AI errors corrected, context added, verification performed, and client outcomes achieved.",
+      "how_it_helps": "It gives freelancers concrete evidence of their own contribution, especially when clients assume the AI did most of the work.",
+      "mechanism": "Changes the construal from \"AI did this, so my skill is invisible\" to \"my judgment, corrections, and context are the reason the final work is good.\""
+     },
+     {
+      "name": "Craft Reflection and Self-Affirmation Log",
+      "what": "A lightweight reflection tool where freelancers record moments when their taste, ethics, creativity, client knowledge, or lived experience improved a project.",
+      "how_it_helps": "It helps freelancers reconnect with the skills and values that make their work feel like theirs, especially after lowballing, suspicion, or discouraging AI comparisons.",
+      "mechanism": "Changes the construal from \"this setback proves I am replaceable\" to \"this is a hard market moment, but I have durable skills and values.\""
+     },
+     {
+      "name": "Pricing Rejection Debrief Coach",
+      "what": "A guided debrief and script tool for moments when clients lowball, compare rates to AI, or imply that AI use should reduce pay.",
+      "how_it_helps": "It helps freelancers separate client misunderstanding or poor fit from their own worth, then respond with clear value language or walk away.",
+      "mechanism": "Changes the construal from \"the client rejected my price because I am not worth it\" to \"this may be a value-mismatch or expectation problem I can address strategically.\""
+     },
+     {
+      "name": "Human Touch Signal",
+      "what": "A client-facing badge or project note that highlights human-authored elements such as original concept, personal story, cultural judgment, audience adaptation, or final expert review.",
+      "how_it_helps": "It lets freelancers make the human parts of the work explicit without denying that AI may have assisted in limited ways.",
+      "mechanism": "Changes the construal from \"AI assistance makes the work generic\" to \"human intention, story, and judgment are visible parts of the final product.\""
+     }
+    ]
+   },
+   {
+    "key": "belong",
+    "name": "Need to belong",
+    "definition": "People need to feel accepted, connected, and supported. In this data, AI intensifies the need for belonging because freelancers still rely on human peers for judgment, encouragement, firsthand knowledge, feedback, referrals, and emotional support.",
+    "how_it_shows_up": "Freelancers describe needing editors, artists, mentors, colleagues, clients, parents, focus groups, and online communities. The barriers are timing, trust, limited networks, fear of looking incompetent, lack of the right person, and the need for experienced human feedback that AI cannot provide.",
+    "evidence": [
+     {
+      "point": "Existing peer networks are valuable, but limited size and time-zone coverage leave freelancers unsupported at critical moments.",
+      "pid": 10,
+      "quote": "It would help to have more people in our network. There used to be more of us, but one of them died unexpectedly and many of the others don't do editing work anymore. They can't make a living at it these days."
+     },
+     {
+      "point": "Human support can extend through networks and provide trusted firsthand knowledge that AI lacks.",
+      "pid": 6,
+      "quote": "It was nice to see the web of support branch out to other people I didn't know to quickly get first hand working knowledge that helped me solve my problem . I trusted the solution because it had been implemented successfully by another"
+     },
+     {
+      "point": "Some freelancers explicitly want practical forums organized around recurring freelancer needs.",
+      "pid": 7,
+      "quote": "Maybe a fourm with category of our most needed subject like extra footage cheaper footage ect"
+     },
+     {
+      "point": "At least one participant directly named community as a needed support focus.",
+      "pid": 9,
+      "quote": "community"
+     },
+     {
+      "point": "Networking and relationships are described as central to reputation and positive freelancing outcomes.",
+      "pid": 13,
+      "quote": "Positive! I feel like that's been tied to my networking and the relationships I've built freelancing"
+     }
+    ],
+    "products": [
+     {
+      "name": "24/7 Expert Exchange",
+      "what": "A vetted peer network matched by skill, time zone, task type, and urgency, so freelancers can get quick human feedback when their usual contacts are unavailable.",
+      "how_it_helps": "It supports late-night, deadline-driven, or specialized questions where AI is not trusted or where a human eye is needed.",
+      "mechanism": "Changes the construal from \"I am alone with this problem\" to \"there is a reliable human network available when I need it.\""
+     },
+     {
+      "name": "Freelancer Circles and Local Meetups",
+      "what": "Small recurring groups for freelancers in similar or adjacent fields, combining professional problem-solving, client-strategy discussion, and emotional check-ins.",
+      "how_it_helps": "It gives freelancers a consistent place for support, referrals, shared learning, and reassurance as AI changes their markets.",
+      "mechanism": "Changes the construal from \"other freelancers are just competition\" to \"other freelancers are peers who understand and can help.\""
+     },
+     {
+      "name": "Trusted Human Feedback Marketplace",
+      "what": "A platform for finding experienced reviewers for specific needs such as design critique, cultural sensitivity, final touches, English learner explanations, app testing, or client-facing judgment.",
+      "how_it_helps": "It makes asking for help feel normal, professional, and targeted rather than risky or embarrassing.",
+      "mechanism": "Changes the construal from \"asking a person may make me look incompetent\" to \"seeking expert feedback is part of high-quality work.\""
+     },
+     {
+      "name": "Relationship and Referral Hub",
+      "what": "A lightweight CRM and referral system that helps freelancers maintain client relationships, document trust-building moments, ask for introductions, and find repeat-work opportunities.",
+      "how_it_helps": "It supports the repeated-client and network-based work patterns that several freelancers describe as important for trust, reputation, and steady income.",
+      "mechanism": "Changes the construal from \"I am excluded from reliable opportunities\" to \"I am connected to a living network of clients and peers.\""
+     }
+    ]
+   }
+  ],
+  "_model": "gpt-5.5"
+ }
+}
